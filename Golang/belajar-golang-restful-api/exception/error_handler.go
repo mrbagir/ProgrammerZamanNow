@@ -28,7 +28,7 @@ func validationErrors(writer http.ResponseWriter, _ *http.Request, err interface
 		writer.WriteHeader(http.StatusBadRequest)
 
 		webResponse := web.WebResponse{
-			Code:   http.StatusNotFound,
+			Code:   http.StatusBadRequest,
 			Status: "BAD REQUEST",
 			Data:   exception.Error(),
 		}
